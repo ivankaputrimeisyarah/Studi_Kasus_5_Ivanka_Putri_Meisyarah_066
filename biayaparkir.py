@@ -1,10 +1,13 @@
-def hitung_biaya_parkir(jenis_kendaraan, durasi):
+def hitung_biaya_parkir(jenis_kendaraan, durasi_parkir):
     if jenis_kendaraan == "mobil":
         tarif = 5000
     elif jenis_kendaraan == "motor":
         tarif = 3000
-
-    total_biaya = tarif * durasi
+    else:
+        print("Kendaraan tidak terdeteksi!")
+        return 0
+        
+    total_biaya = tarif * durasi_parkir
     return total_biaya
 
 jenis_kendaraan = input("Masukkan jenis kendaraan (mobil/motor): ")
